@@ -10,3 +10,4 @@ pom.xml.asc
 .idea/
 repl/
 out/
+resources/public/js/cljs.js
