@@ -3,7 +3,6 @@
             [compojure.route :as route]
             [ring.util.response :as response]
             [hiccup.core :refer :all]
-            [hiccup.form :as f]
             [compojure.core :refer :all]))
 
 (defn view-layout [& content]
@@ -17,6 +16,7 @@
 
 (defn view-content []
   (view-layout
+    [:img {:src "/images/clojure_logo.gif" :alt "clojure logo"}]
     [:h1 "clj-test-website"]
     [:p "Get yourself a nice alert by clicking on the button."]
     [:button#clickhere "Click Me!"]
@@ -36,7 +36,6 @@
       [:div [:label {:for "submit"}]
        [:input#submit {:type "submit" :value "Login"}]]]]
 
-    [:script {:src "/js/jquery-1.11.1.min.js"}]
     [:script {:src "/js/cljs.js"}]))
 
 (declare main-routes)
