@@ -6,16 +6,17 @@
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojure/clojurescript "0.0-2322"]
                  [compojure "1.1.9"]
-                 [domina "1.0.3-SNAPSHOT"]
-                 [hiccup "1.0.5"]]
+                 [jayq "2.5.2"]
+                 [hiccup "1.0.5"]
+                 [cljs-ajax "0.2.6"]]
   :plugins [[lein-cljsbuild "1.0.3"]
             [lein-ring "0.8.11"]]
   :source-paths ["src/clj"]
   :cljsbuild {:builds
                [{:source-paths ["src/cljs"],
                  :id "main",
-                 :compiler {:optimizations :simple,
-                            :output-to "resources/public/js/cljs.js",
-                            :pretty-print true}}]}
+                 :compiler {:optimizations :whitespace,
+                            :output-to     "resources/public/js/cljs.js",
+                            :pretty-print  true}}]}
   :main clj-test-website.server
   :ring {:handler clj-test-website.server/app})

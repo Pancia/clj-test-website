@@ -11,4 +11,5 @@ pom.xml.asc
 repl/
 out/
 resources/public/js/cljs.js
-
+resources/public/images/avatars/
+clj_test_website.iml
